@@ -2,7 +2,8 @@
 
 import React, { PureComponent } from 'react'
 
-import './css/style.css'
+import 'normalize.css'
+import 'milligram'
 
 class App extends PureComponent {
   constructor () {
