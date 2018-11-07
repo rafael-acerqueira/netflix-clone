@@ -39,8 +39,6 @@ const Container = styled.div`
   }
 `
 
-
-
 const VideoThumb = styled.div`
   display: flex;
   align-items: center;
