@@ -12,7 +12,10 @@ import 'milligram'
 const App = () => (
   <Container>
     <Header>
-      <h1>React Clone</h1>
+      <HeaderTitle>React Clone</HeaderTitle>
+      <RegisterButton>
+        Cadastrar Vídeo
+      </RegisterButton>
     </Header>
 
     <Main>
@@ -37,8 +40,12 @@ const headerHeight = '60px'
 const footerHeight = '30px'
 
 const Header = styled.header`
-  height: ${headerHeight};
   background: #333;
+  display: flex;
+  height: ${headerHeight};
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 `
 
 const Main = styled.main`
@@ -52,6 +59,15 @@ const Footer = styled.footer`
 
 const Container = styled.div`
   height: 100%;
+`
+
+const RegisterButton = styled.button`
+  margin-bottom: 0;
+`
+
+const HeaderTitle = styled.h1`
+  margin-bottom: 0;
+  color: #FFF;
 `
 
 export default App
