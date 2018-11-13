@@ -11,7 +11,7 @@ const ui = createReducer(initialState, {
     isRegisterVideoFormOpened: true
   }),
 
-  [CLOSE_REGISTER_VIDEO]: (state, action) =>({
+  [CLOSE_REGISTER_VIDEO]: (state, action) => ({
     ...state,
     isRegisterVideoFormOpened: false
   })
