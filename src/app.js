@@ -20,7 +20,6 @@ class App extends PureComponent {
   }
 
   render () {
-
     const { isRegisterVideoFormOpened, videoSingleId, videos } = this.props
 
     return (

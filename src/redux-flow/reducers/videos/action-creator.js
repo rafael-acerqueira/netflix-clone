@@ -13,8 +13,13 @@ export const addVideo = ({ id, title }) => ({
 
 export const fetchVideos = () => (dispatch) => {
   db.ref('videos').on('value', (snapshot) => {
-    snapshot.forEach((child) => {
-      dispatch(addVideo(child.val()))
-    })
+    const videos = snapshot.val()
+    const ordened = Object.keys(videos)
+    .sort((a, b) => videos[a].title < videos[b].title ? -1 : 1)
+    .map((id) => ({
+      id,
+      title: videos[id].title
+    }))
+    ordened.forEach((video) => dispatch(addVideo(video)))
   })
 }
